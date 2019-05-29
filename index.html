@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中竞教育A星寻路教程</title>
+    <meta about="作者:胡亚雷，2019年2月25日">
+    <script src="gamemap.js"></script>
+    <script src="gamepath.js"></script>
+    <script src="functions.js"></script>
+</head>
+<body onload="onLoad()">
+
+<select id="leftbutton">
+    <option value="start">设置起点</option>
+    <option value="end">设置终点</option>
+    <option value="block">设置阻挡</option>
+    <option value="clear">清除</option>
+</select>
+<button onclick="initMap()">重置地图</button>
+<button onclick="pathInit()">重置寻路</button>
+<button onclick="pathStart()">开始寻路</button>
+<button onclick="pathStep()">下一步</button>
+<button onclick="autoStep()">自动</button>
+<button onclick="pauseStep()">暂停</button>
+<br>
+<canvas id="rendertarget" width="800px" height="800px"
+        onmousedown="onMouseDown()" onmouseup="onMouseUp()" onmousemove="onMouseMove()"></canvas>
+</body>
+</html>
